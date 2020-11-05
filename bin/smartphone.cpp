@@ -19,24 +19,32 @@
 using namespace std;
 
 // Variabiles
-int N;
+long N, actual, actual_price, result;
 
 // Main code
 int main()
 {
-  // Cncomment the following lines if you want to read/write from files
-  // freopen("input.txt", "r", stdin);
-  // freopen("output.txt", "w", stdout);
+    // Cncomment the following lines if you want to read/write from files
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
 
-  // Input
-  cin >> N;
+    // Input
+    cin >> N;
+    actual_price = 0;
+    result = 0;
+    for (int i = 0; i < N; ++i)
+    {
+        cin >> actual;
+        if (actual > actual_price)
+        {
+            actual_price = actual;
+            result += actual_price;
+        }
+    }
 
-  // Code
-  // ...
+    // Output
+    cout << result;
 
-  // Output
-  cout << N << endl;
-
-  // End
-  return 0;
+    // End
+    return 0;
 }
